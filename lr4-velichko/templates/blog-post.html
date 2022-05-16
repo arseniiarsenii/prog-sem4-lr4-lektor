@@ -1,6 +1,10 @@
-{% extends "layout.html" %}
-{% from "macros/blog.html" import render_blog_post %}
-{% block title %}{{ this.title }}{% endblock %}
-{% block body %}
-  {{ render_blog_post(this) }}
-{% endblock %}
+{% extends "layout.html" %} 
+{% from "macros/blog.html" import render_blog_post%} 
+{% block title %}{{ this.title }}
+{% endblock %} 
+{% block body %} 
+{{render_blog_post(this) }} {% endblock %} 
+
+{% block footer %}
+  <p>Copyright 2022 by <a href="{{ this.vk }}">{{ this.author }}</a></p>
+{% endblock %} 

@@ -1,0 +1,15 @@
+{% extends "layout.html" %} {% block title %}Projects{% endblock %} {% block
+body %}
+<h1 class="text-center">Projects</h1>
+<div class="projects py-2">
+  {% for project in this.children %}
+  <div class="project mb-3 d-md-flex d-block ">
+    <h2 class="mr-3">
+      <a href="{{ project|url }}">{{ project.name }}</a>
+    </h2>
+    <h3 class="mr-3">({{ project.date.year }})</p>
+    <h5>{{ project.class }}</h3>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
